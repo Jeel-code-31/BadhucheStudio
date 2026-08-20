@@ -1,0 +1,89 @@
+# Badhuche Art Studio - Cursor AI Rules
+
+## Project Overview
+Badhuche is a premium art studio website showcasing monumental sculptures and murals. The design is inspired by award-winning architecture/art studio sites like OHArchitecture.com.au.
+
+## Design System
+
+### Color Palette (Warm Ivory Theme)
+- Background: `#FAF7F2` (warm ivory)
+- Foreground/Text: `#1A1815` (warm charcoal)
+- Body Text: `#3d3835` (dark warm gray)
+- Label Text: `#4a4640` (medium warm gray)
+- Primary Accent: `#C2542D` (terracotta)
+- Secondary Accent: `#B8963F` (antique gold)
+- Muted: `#E8E4DD` (light warm gray)
+- Dividers: `rgba(26, 24, 21, 0.1)`
+
+### Typography
+- Headings: `Marcellus` (serif, elegant)
+- Body: `Jost` (sans-serif, modern)
+- Mono/Labels: `JetBrains Mono`
+
+### Key Design Principles
+1. NO borders/outlines on cards - use shadows and subtle backgrounds
+2. Sharp corners (border-radius: 0) for geometric aesthetic
+3. Generous whitespace
+4. Asymmetric layouts for visual interest
+5. All shadows use dark charcoal tones (never white on ivory background)
+
+## Tech Stack
+- Next.js 16 (App Router)
+- React 19
+- Tailwind CSS v4
+- Framer Motion for animations
+- TypeScript
+
+## Component Architecture
+
+### Custom Components (in /components)
+- `custom-cursor.tsx` - Artistic blob cursor with particle effects
+- `magnetic-button.tsx` - Buttons that react to cursor proximity
+- `navigation.tsx` - Scroll-responsive nav with Commission CTA
+- `project-card.tsx` - Project display with numbered overlay
+- `process-section.tsx` - Interactive process timeline
+- `text-reveal.tsx` - Scroll-triggered text animations
+- `hero-gradient.tsx` - Animated background gradients
+
+### Pages (in /app)
+- `/` - Homepage with hero, works grid, process section
+- `/studio` - About the studio and team
+- `/works` - Full project portfolio
+- `/contact` - Contact form and info
+- `/process` - Detailed process breakdown
+
+## Coding Standards
+
+### Animations
+- Use Framer Motion for React animations
+- Prefer CSS transitions for simple hover states
+- Always include `transition-all duration-300` minimum
+- Use `ease-out` or custom bezier curves
+
+### Styling
+- Use Tailwind classes, avoid inline styles
+- Follow mobile-first approach
+- Use CSS custom properties from globals.css
+- Apply `.oh-heading`, `.oh-body`, `.oh-label` utility classes
+
+### Accessibility
+- All images need alt text describing the artwork
+- Interactive elements need focus states
+- Maintain color contrast ratios
+- Use semantic HTML elements
+
+## Project Data Structure
+
+Projects are currently dummy data. When connecting real data:
+
+```typescript
+interface Project {
+  id: string
+  title: string
+  category: string // "Sculpture" | "Mural" | "Installation" | "Memorial"
+  location: string
+  year: string
+  description: string
+  images: string[]
+  featured: boolean
+}

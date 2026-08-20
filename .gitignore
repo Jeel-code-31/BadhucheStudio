@@ -1,0 +1,21 @@
+# Next.js
+.next
+node_modules
+
+# Environment & local settings
+.env.local
+.env*.local
+
+# Vercel & build tools
+.vercel
+.turbo
+*.tsbuildinfo
+
+# OS & Editor
+.DS_Store
+Thumbs.db
+.cursor/
+.vscode/
+
+# Sanity
+.sanity/runtime

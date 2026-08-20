@@ -1,9 +1,8 @@
 import { createClient } from "@sanity/client"
 import "server-only"
 
-const projectId = process.env.SANITY_PROJECT_ID
-const dataset = process.env.SANITY_DATASET || "production"
-const apiVersion = process.env.SANITY_API_VERSION || "2024-01-01"
+import { apiVersion, dataset, projectId } from "../env"
+
 const useCdn = process.env.NODE_ENV === "production"
 
 export const client = createClient({

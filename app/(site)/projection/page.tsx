@@ -16,7 +16,7 @@ const PROJECTS_DATA = [
     title: "Story of Ramayan",
     slug: "Ramayan",
     image: "/Ramayan1.png",
-    videoUrl: "https://iframe.mediadelivery.net/embed/583855/7838c69b-7d21-40e4-af72-ec682884baa4?autoplay=true&loop=false&muted=false&preload=true&responsive=true",
+    videoUrl: "https://iframe.mediadelivery.net/play/583855/912f0d66-3718-4682-ab0d-ec228ae1af66",
     category: "Ramayan",
   },
 {
